@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 40%;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .container {
+      padding: 2px 16px;
+    }
+    </style>
+
+<body>
+    <div class="container" id="cards">
+
+
+     </div>
+
+</body>
+<script>
+
+var cards = document.getElementById("cards");
+var products = [
+  { name: "Cake", price: "150", image: "./cake.jfif" },
+  { name: "Chana chaat", price: "150", image: "./chana chat.jfif" },
+  { name: "Dumplings", price: "400", image: "./dumplings.jfif" },
+  { name: "Golgappay", price: "200", image: "./golgappay.jfif" },
+  { name: "Icecream", price: "100", image: "./icecream.jfif" },
+  { name: "Pasta", price: "600", image: "./pasta.jfif" },
+  { name: "Pizza", price: "1500", image: "./pizza.jfif" },
+  { name: "Zinger", price: "450", image: "./zinger.jfif" }
+]
+
+for(var i = 0; i < products.length; i++)
+{
+  cards.innerHTML += `
+<div class="card">
+  <img src="${products[i].image}" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>${products[i].name}</b></h4> 
+    <p> ${products[i].price}</p>
+  </div> 
+  </div>
+  `;
+}
+
+</script>
+</html>
